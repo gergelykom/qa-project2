@@ -1,8 +1,10 @@
 from application import app, db
 from flask import render_template
 from flask import request
+from sqlalchemy import desc
 import requests
 import json
+from os import getenv
 
 class Qrand(db.Model):
     id = db.Column(db.Integer, primary_key=True, nullable=False)
@@ -21,6 +23,6 @@ def index():
     db.session.add(new_qran)
     db.session.commit()
 
-    all_qran = Qrand.query.all()
+    all_qran = Qrand.query.order_by(desc("id")).limit(5).all()
 
-    return render_template("index.html", meal = meal_response.text, qran=qran_response.text, whatudone=whatudone_response.text, all_qran = all_qran)
+    return render_template("index.html", meal = meal_response.text, qran=qran_response.text, whatudone=whatudone_response.text, all_qran = all_qran, app_version=getenv("APP_VERSION"))
