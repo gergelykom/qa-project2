@@ -14,7 +14,7 @@ deactivate
 cd ..
 
 
-cd qa-project2 && cd serv-2
+cd serv-2
 python3 -m venv venv
 source venv/bin/activate
 pip3 install -r requirements.txt
@@ -24,7 +24,7 @@ deactivate
 cd ..
 
 
-cd qa-project2 && cd serv-3
+cd serv-3
 python3 -m venv venv
 source venv/bin/activate
 pip3 install -r requirements.txt
@@ -34,7 +34,7 @@ deactivate
 cd ..
 
 
-cd qa-project2 && cd serv-4
+cd serv-4
 python3 -m venv venv
 source venv/bin/activate
 pip3 install -r requirements.txt
