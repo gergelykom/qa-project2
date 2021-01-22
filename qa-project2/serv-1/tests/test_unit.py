@@ -2,6 +2,7 @@ from unittest.mock import patch
 from flask import url_for
 from flask_testing import TestCase
 import requests_mock
+import flask_sqlalchemy
 
 from application import app, db
 from application.routes import Qrand
