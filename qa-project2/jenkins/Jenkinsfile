@@ -28,7 +28,7 @@ pipeline{
         }
         stage("Config Management (ansible)"){
             steps{
-                sh "cd /home/gerge/qa-project2/qa-project2/ansible && /home/gerge/qa-project2/qa-project2/ansible/playbook.yaml -i inventory playbook.yaml"
+                sh "cd ansible && /home/jenkins/.local/bin/ansible-playbook -i inventory playbook.yaml"
             }
         }
         stage("Deploy"){
