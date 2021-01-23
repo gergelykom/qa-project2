@@ -25,4 +25,4 @@ def index():
 
     all_qran = Qrand.query.order_by(desc("id")).limit(5).all()
 
-    return render_template("index.html", meal = meal_response.text, qran=qran_response.text, whatudone=whatudone_response.text, all_qran = all_qran, app_version=basic)
+    return render_template("index.html", meal = meal_response.text, qran=qran_response.text, whatudone=whatudone_response.text, all_qran = all_qran)
