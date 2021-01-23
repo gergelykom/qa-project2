@@ -5,5 +5,5 @@ import random
 
 @app.route("/qran", methods=["GET"])
 def get_qran():
-    qrans = [ '80' , '800' , '1600' , '2400' , '3200' , '4000']
+    qrans = [ '60' , '600' , '1800' , '2400' , '3600' , '4200']
     return Response(str(random.choice(qrans)), mimetype = 'text/plain')
