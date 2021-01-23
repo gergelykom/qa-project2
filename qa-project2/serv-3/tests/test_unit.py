@@ -19,11 +19,11 @@ class TestResponse(TestBase):
 
     def test_meal(self):
         with patch("random.choice") as random:
-            random.return_value = "pizza"           
+            random.return_value = "paella"           
             response = self.client.get(url_for('get_meal'))
-            self.assertEqual(b'pizza', response.data)
+            self.assertEqual(b'paella', response.data)
 
         for _ in range(10):
             response = self.client.get(url_for('get_meal'))
-            self.assertIn(response.data, [b"pasta", b"burger", b"pizza", b"pbj"])
+            self.assertIn(response.data, [b"paella", b"stir-fry", b"lasagne", b"korean style mapo tofu"])
         
