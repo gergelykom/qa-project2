@@ -1,5 +1,5 @@
 <h1>Get a Quantum meal - cure your existential dread!</h1>
-<h3> App version: {{app_version }} </h3>
+<h3> App version: basic </h3>
 <h2>Refresh to generate a new meal</h2>
 <br>
 <p>
@@ -15,7 +15,7 @@
 <p>
     <br>
     {% for qran in all_qran %}
-    eating a {{ qran.qran_meal }} randomised by {{ qran.qran_num }} caused {{ qran.qran_what }}
+    eating a {{ qran.qran_meal }} randomised by {{ qran.qran_num }} could have the following consequences {{ qran.qran_what }}
     <br>
     {% endfor %}
     <br>
