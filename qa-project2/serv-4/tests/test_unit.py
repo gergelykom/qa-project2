@@ -19,47 +19,47 @@ class TestResponse(TestBase):
     
 
     def test_whatudone(self):
-        response = self.client.post(url_for('whatudone'), json={ 'meal' : 'pasta' , 'qran' : '2400'})
+        response = self.client.post(url_for('whatudone'), json={ 'meal' : 'paella' , 'qran' : '2400'})
 
 
-        self.assertEqual(b"You will roll 6 nat20's in a row!", response.data)
+        self.assertEqual(b"You will cause the moon to leave Earth's orbit!", response.data)
         
     def test_whatudone2(self):
-        response = self.client.post(url_for('whatudone'), json={ 'meal' : 'pasta' , 'qran' : '1800'})
+        response = self.client.post(url_for('whatudone'), json={ 'meal' : 'paella' , 'qran' : '1600'})
 
 
-        self.assertEqual(b"Congratulations, you just destroyed the Universe!", response.data)
+        self.assertEqual(b"You will make siesta mandatory!", response.data)
 
     def test_whatudone3(self):
-        response = self.client.post(url_for('whatudone'), json={ 'meal' : 'burger' , 'qran' : '1800'})
+        response = self.client.post(url_for('whatudone'), json={ 'meal' : 'stir-fry' , 'qran' : '1600'})
         
         
-        self.assertEqual(b"You just aided the emergence of intelligent sushi!", response.data)
+        self.assertEqual(b"You just started a chain of events where a goose will be elected as president of the United States!", response.data)
 
     def test_whatudone4(self):
-        response = self.client.post(url_for('whatudone'), json={ 'meal' : 'burger' , 'qran' : '2400'})
+        response = self.client.post(url_for('whatudone'), json={ 'meal' : 'stir-fry' , 'qran' : '2400'})
         
-        self.assertEqual(b"You just helped humanity to achieve techonological singularity!", response.data)
+        self.assertEqual(b"You will make world-peace happen!", response.data)
 
     def test_whatudone5(self):
-        response = self.client.post(url_for('whatudone'), json={ 'meal' : 'pizza' , 'qran' : '1800'})
+        response = self.client.post(url_for('whatudone'), json={ 'meal' : 'lasagne' , 'qran' : '1600'})
         
-        self.assertEqual(b"You will get a hearthburn!", response.data)
+        self.assertEqual(b"You will cause a massive (literal) headache for someone!", response.data)
 
     def test_whatudone6(self):
-        response = self.client.post(url_for('whatudone'), json={ 'meal' : 'pizza' , 'qran' : '2400'})
+        response = self.client.post(url_for('whatudone'), json={ 'meal' : 'lasagne' , 'qran' : '2400'})
         
-        self.assertEqual(b"You will cause doplhins to take over the Earth!", response.data)
+        self.assertEqual(b"Your meal will cause turnips to rise and enslave humanity!", response.data)
 
     def test_whatudone7(self):
-        response = self.client.post(url_for('whatudone'), json={ 'meal' : 'pbj' , 'qran' : '1800'})
+        response = self.client.post(url_for('whatudone'), json={ 'meal' : 'korean style mapo tofu' , 'qran' : '1600'})
         
-        self.assertEqual(b"You will cause crocs to be mandatory at fashion shows!", response.data)
+        self.assertEqual(b"You will cause number 11 to be removed!", response.data)
 
     def test_whatudone8(self):
-        response = self.client.post(url_for('whatudone'), json={ 'meal' : 'pbj' , 'qran' : '2400'})
+        response = self.client.post(url_for('whatudone'), json={ 'meal' : 'korean style mapo tofu' , 'qran' : '2400'})
         
-        self.assertEqual(b"Your actions will start a war with a K3 civilisation!", response.data)
+        self.assertEqual(b"Your actions will cut infinity into half!", response.data)
         
         
 
