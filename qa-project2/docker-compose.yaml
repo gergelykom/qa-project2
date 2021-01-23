@@ -1,0 +1,33 @@
+version: '3.8'
+services:
+  qrandom:
+    container_name: qrandom_qrandom
+    image: gregkomu/qrandom_qrandom:vegan
+    build: ./serv-1
+    ports:
+    - target: 5000
+      published: 5000
+      protocol: tcp
+    environment:
+      DATABASE_URI: ${DATABASE_URI}
+      
+    deploy:
+      replicas: 3
+  qrandom-qran:
+    container_name: qrandom_qrandom-qran
+    build: ./serv-2
+    image: gregkomu/qrandom_qrandom-qran:vegan
+    deploy:
+      replicas: 3
+  qrandom-meal:
+    container_name: qrandom_qrandom-meal
+    build: ./serv-3
+    image: gregkomu/qrandom_qrandom-meal:vegan
+    deploy:
+      replicas: 3
+  qrandom-whatudone:
+    container_name: qrandom_qrandom-whatudone
+    build: ./serv-4
+    image: gregkomu/qrandom_qrandom-whatudone:vegan
+    deploy:
+      replicas: 3
