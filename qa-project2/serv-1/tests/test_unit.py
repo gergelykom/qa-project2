@@ -37,4 +37,4 @@ class TestResponse(TestBase):
             self.assertIn(b'pbj', response.data)
             self.assertIn(b'random number 4000 advises pbj!', response.data)
             
-            self.assertIn(b'eating a debug randomised by test num caused what', response.data)
+            self.assertIn(b'eating a debug randomised by test num could have the following consequences what', response.data)
