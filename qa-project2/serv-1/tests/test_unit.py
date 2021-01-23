@@ -33,6 +33,8 @@ class TestResponse(TestBase):
             m.post("http://qrandom-whatudone:5000/whatudone", text = 'random number 4000 advises pbj!')
             
             response = self.client.get(url_for('index'))
+            self.assertIn(b'4000', response.data)
+            self.assertIn(b'pbj', response.data)
             self.assertIn(b'random number 4000 advises pbj!', response.data)
             
             self.assertIn(b'eating a debug randomised by test num caused what', response.data)
