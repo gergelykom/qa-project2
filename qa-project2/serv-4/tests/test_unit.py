@@ -13,24 +13,26 @@ class TestBase(TestCase):
         return app
 
   
-
+#test all
 class TestResponse(TestBase):
 
     
 
     def test_whatudone(self):
         response = self.client.post(url_for('whatudone'), json={ 'meal' : 'pasta' , 'qran' : '2400'})
-       
-        
+
+
         self.assertEqual(b"You will roll 6 nat20's in a row!", response.data)
         
     def test_whatudone2(self):
         response = self.client.post(url_for('whatudone'), json={ 'meal' : 'pasta' , 'qran' : '1800'})
-        
+
+
         self.assertEqual(b"Congratulations, you just destroyed the Universe!", response.data)
 
     def test_whatudone3(self):
         response = self.client.post(url_for('whatudone'), json={ 'meal' : 'burger' , 'qran' : '1800'})
+        
         
         self.assertEqual(b"You just aided the emergence of intelligent sushi!", response.data)
 
@@ -44,7 +46,7 @@ class TestResponse(TestBase):
         
         self.assertEqual(b"You will get a hearthburn!", response.data)
 
-     def test_whatudone6(self):
+    def test_whatudone6(self):
         response = self.client.post(url_for('whatudone'), json={ 'meal' : 'pizza' , 'qran' : '2400'})
         
         self.assertEqual(b"You will cause doplhins to take over the Earth!", response.data)
