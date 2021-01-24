@@ -5,7 +5,7 @@ import random
 
 @app.route("/meal", methods=["GET"])
 def get_meal():
-    meals = [ 'paella', 'stir-fry', 'lasagne', 'korean style mapo tofu' ]
+    meals = [ 'pasta', 'burger', 'pizza', 'pbj' ]
     meal = request.data.decode("utf-8")
     return Response(str(random.choice(meals)), mimetype = 'text/plain')
     
