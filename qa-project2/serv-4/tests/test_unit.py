@@ -34,7 +34,7 @@ class TestResponse(TestBase):
         response = self.client.post(url_for('whatudone'), json={ 'meal' : 'stir-fry' , 'qran' : '1600'})
         
         
-        self.assertEqual(b"You just started a chain of events where a goose will be elected as president of the United States!", response.data)
+        self.assertEqual(b"A goose will be elected as president of the United States!", response.data)
 
     def test_whatudone4(self):
         response = self.client.post(url_for('whatudone'), json={ 'meal' : 'stir-fry' , 'qran' : '2400'})

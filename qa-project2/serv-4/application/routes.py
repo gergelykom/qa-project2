@@ -15,7 +15,7 @@ def whatudone():
         whatudone = "You will cause the moon to leave Earth's orbit!"
 
     elif get_qran < 2000 and get_meal == 'stir-fry':
-        whatudone = "You just started a chain of events where a goose will be elected as president of the United States!"
+        whatudone = "A goose will be elected as president of the United States!"
     elif 2000 <= get_qran and get_meal == 'stir-fry':
         whatudone = "You will make world-peace happen!"
 
