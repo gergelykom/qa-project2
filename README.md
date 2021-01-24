@@ -58,5 +58,6 @@ we cannot prove nor disprove whether these predictions will happen or not due to
 For planning and tracking I decided to use trello. The entire application was completed in one sprint but potential improvements for future sprints are also listed.  
 I used the MOSCOW methodology to prioritise.  
 
-![trello-initial](https://github.com/gergelykom/qa-project2/main/images/trello-initial.JPG)
+This was my original planning board towards the beginning of the project:
+![Trello1](https://github.com/gergelykom/qa-project2/blob/main/images/trello-initial.JPG)
 
