@@ -1,6 +1,6 @@
 version: '3.8'
 services:
-  qrandom:
+  qrandom-v:
     container_name: qrandom_qrandomveg
     image: gregkomu/qrandom_qrandomveg
     build: ./serv-1
@@ -13,19 +13,19 @@ services:
       
     deploy:
       replicas: 3
-  qrandom-qran:
+  qrandom-qran-v:
     container_name: qrandom_qrandom-qranveg
     build: ./serv-2
     image: gregkomu/qrandom_qrandom-qranveg
     deploy:
       replicas: 3
-  qrandom-meal:
+  qrandom-meal-v:
     container_name: qrandom_qrandom-mealveg
     build: ./serv-3
     image: gregkomu/qrandom_qrandom-mealveg
     deploy:
       replicas: 3
-  qrandom-whatudone:
+  qrandom-whatudone-v:
     container_name: qrandom_qrandom-whatudoneveg
     build: ./serv-4
     image: gregkomu/qrandom_qrandom-whatudoneveg
