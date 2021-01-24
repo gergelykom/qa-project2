@@ -1,8 +1,8 @@
 version: '3.8'
 services:
   qrandom:
-    container_name: qrandom_qrandom
-    image: gregkomu/qrandom_qrandom:vegan
+    container_name: qrandom_qrandom-v
+    image: gregkomu/qrandom_qrandom_vegan
     build: ./serv-1
     ports:
     - target: 5000
@@ -14,20 +14,20 @@ services:
     deploy:
       replicas: 3
   qrandom-qran:
-    container_name: qrandom_qrandom-qran
+    container_name: qrandom_qrandom-qran-v
     build: ./serv-2
-    image: gregkomu/qrandom_qrandom-qran:vegan
+    image: gregkomu/qrandom_qrandom-qran_vegan
     deploy:
       replicas: 3
   qrandom-meal:
-    container_name: qrandom_qrandom-meal
+    container_name: qrandom_qrandom-meal-v
     build: ./serv-3
-    image: gregkomu/qrandom_qrandom-meal:vegan
+    image: gregkomu/qrandom_qrandom-meal_vegan
     deploy:
       replicas: 3
   qrandom-whatudone:
-    container_name: qrandom_qrandom-whatudone
+    container_name: qrandom_qrandom-whatudone-v
     build: ./serv-4
-    image: gregkomu/qrandom_qrandom-whatudone:vegan
+    image: gregkomu/qrandom_qrandom-whatudone_vegan
     deploy:
       replicas: 3
