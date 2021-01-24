@@ -80,7 +80,7 @@ The original risk assessment table:
 The final version:  
 ![Risk2](https://github.com/gergelykom/qa-project2/blob/main/images/risk-final.JPG)  
 
-###Database (ED)  
+### Database (ED)  
 The database used for this project is very simple, both versions use the same database and there are no relationships.  
 
 ED:  
