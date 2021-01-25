@@ -41,12 +41,13 @@
 ### Platform Requirements
 - Trello board  
 - Reverse Proxy and load-balancing: NGINX  
-- Orchestration Tool: Docker Swarm  
-- Containerisation tool: Docker  
+- Orchestration Tool: Docker Swarm (scalability, redundancy, better resource management through the usage of multiple nodes, allows rolling updates)
+- Docker Compose (automatically build multiple services, automatically adds them to a network, easy scalability, uses a yaml file) 
+- Containerisation tool: Docker (free, open source, faster than VMs, require less resources)  
 - Cloud server: GCP virtual machines  
-- CI server: Jenkins  
+- CI server: Jenkins (open source automation service)   
 - Version Control: Git  
-- Configuration Management: Ansible  
+- Configuration Management: Ansible (open source, system agnostic) 
 
 ## My application  
 My idea was to create an application that generates true-random numbers and true-random meals. Taking actions based on  
